@@ -1,26 +1,27 @@
-19:58:50 INFO TalentoTech Completando con los datos de usuario
-19:58:50 INFO TalentoTech verficando redireccionamiento dentro de la pagina
-19:58:50 INFO TalentoTech test de login completado
-19:58:56 INFO TalentoTech Completando con los datos de usuario
-2025-11-26 20:01:44 INFO TalentoTech: Completando con los datos de usuario
-2025-11-26 20:01:44 INFO TalentoTech: verficando redireccionamiento dentro de la pagina
-2025-11-26 20:01:44 INFO TalentoTech: test de login completado
-2025-11-26 20:01:50 INFO TalentoTech: Completando con los datos de usuario
-2025-11-26 20:39:10 INFO TalentoTech: Relizando la solitud GET a https://reqres.in/api/users 
-2025-11-26 20:39:10 INFO TalentoTech: Status code: 200
-2025-11-26 20:39:10 INFO TalentoTech: Validando el id dentro del usuario
-2025-12-01 19:20:13 INFO TalentoTech: Completando con los datos de usuario
-2025-12-01 19:20:13 INFO TalentoTech: verficando redireccionamiento dentro de la pagina
-2025-12-01 19:20:13 INFO TalentoTech: Assert Fallido: No se redirgio al inventario
-assert '/inventory.html' in 'https://www.saucedemo.com/'
- +  where 'https://www.saucedemo.com/' = <selenium.webdriver.chrome.webdriver.WebDriver (session="410dc5b99cd0ad4fb5c8cda5f134ec06")>.current_url
-2025-12-01 19:20:18 INFO TalentoTech: Completando con los datos de usuario
-2025-12-01 19:20:18 INFO TalentoTech: Test de login fallido completado con exito
-2025-12-02 15:56:22 INFO TalentoTech: Completando con los datos de usuario
-2025-12-02 15:56:22 INFO TalentoTech: verficando redireccionamiento dentro de la pagina
-2025-12-02 15:56:22 INFO TalentoTech: test de login completado
-2025-12-02 15:56:27 INFO TalentoTech: Completando con los datos de usuario
-2025-12-02 15:56:27 INFO TalentoTech: Test de login fallido completado con exito
-2025-12-02 15:58:30 INFO TalentoTech: Relizando la solitud GET a https://reqres.in/api/users 
-2025-12-02 15:58:30 INFO TalentoTech: Status code: 200
-2025-12-02 15:58:30 INFO TalentoTech: Validando el id dentro del usuario
+2025-12-02 19:23:29 INFO Fernando:utils: Completando con los datos de usuario
+2025-12-02 19:23:29 INFO Fernando:utils: verficando redireccionamiento dentro de la pagina
+2025-12-02 19:23:29 INFO Fernando:utils: test de login completado
+2025-12-02 19:23:34 INFO Fernando:utils: Completando con los datos de usuario
+2025-12-02 19:23:34 INFO Fernando:utils: Test de login fallido completado con exito
+2025-12-02 19:24:11 INFO Fernando:utils: agregando primer producto al carrito
+2025-12-02 19:24:11 INFO Fernando:utils: Abriendo carrito de compras
+2025-12-02 19:24:11 INFO Fernando:utils: Validando producto en el carrito
+2025-12-02 19:24:33 INFO Fernando:utils: Relizando test de carrito con el producto: Sauce Labs Backpack
+2025-12-02 19:24:33 INFO Fernando:utils: Agregando producto: Sauce Labs Backpack
+2025-12-02 19:24:33 INFO Fernando:utils: Abriendo carrito de compras
+2025-12-02 19:24:34 INFO Fernando:utils: Validando producto en el carrito: Sauce Labs Backpack
+2025-12-02 19:24:55 INFO Fernando:utils: Relizando test de carrito con el producto: Sauce Labs Bike Light
+2025-12-02 19:24:55 INFO Fernando:utils: Agregando producto: Sauce Labs Bike Light
+2025-12-02 19:24:55 INFO Fernando:utils: Abriendo carrito de compras
+2025-12-02 19:24:56 INFO Fernando:utils: Validando producto en el carrito: Sauce Labs Bike Light
+2025-12-02 19:25:18 INFO Fernando:utils: Relizando test de carrito con el producto: Sauce Labs Bolt T-Shirt
+2025-12-02 19:25:18 INFO Fernando:utils: Agregando producto: Sauce Labs Bolt T-Shirt
+2025-12-02 19:25:18 INFO Fernando:utils: Abriendo carrito de compras
+2025-12-02 19:25:19 INFO Fernando:utils: Validando producto en el carrito: Sauce Labs Bolt T-Shirt
+2025-12-02 19:25:37 INFO Fernando:utils: Relizando la solitud GET a https://reqres.in/api/users 
+2025-12-02 19:25:38 INFO Fernando:utils: Status code: 200
+2025-12-02 19:25:38 INFO Fernando:utils: Validando el id dentro del usuario
+2025-12-02 19:25:38 INFO Fernando:utils: Relizando la solicitud POST para crear un usuario
+2025-12-02 19:25:38 INFO Fernando:utils: Usuario creado con exito
+2025-12-02 19:25:38 INFO Fernando:utils: Relizando la solicitud DELETE para eliminar un usuario
+2025-12-02 19:25:39 INFO Fernando:utils: Usuario eliminado con exito

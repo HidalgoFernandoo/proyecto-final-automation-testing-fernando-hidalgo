@@ -6,7 +6,7 @@ audit_dir.mkdir(exist_ok=True)
 
 log_file = audit_dir/ 'suite.log'
 
-logger = logging.getLogger("TalentoTech")
+logger = logging.getLogger("Fernando:utils")
 logger.setLevel(logging.INFO)
 
 if not logger.handlers:

@@ -4,6 +4,8 @@ import pytest
 
 from pages.inventory_page import InventoryPage
 
+from utils.logger import logger
+
 @pytest.mark.parametrize("usuario,password",[("standard_user","secret_sauce")])
 def test_inventory(login_in_driver,usuario,password):
     try:

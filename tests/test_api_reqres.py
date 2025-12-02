@@ -14,8 +14,11 @@ def test_get_user(url_base,header_request):
 
     logger.info("Validando el id dentro del usuario")
     assert data["data"]["id"] == 2
+
 # Crear usuario
+
 def test_create_user(url_base,header_request):
+    logger.info("Relizando la solicitud POST para crear un usuario")
     payload={
         "name": "Jose",
         "job": "Profesor"
@@ -23,13 +26,14 @@ def test_create_user(url_base,header_request):
     response = requests.post(url_base,headers=header_request,json=payload)
 
     assert response.status_code == 201
-
+    logger.info("Usuario creado con exito")
     data = response.json()
 
     assert data["name"] == payload["name"]
 
 # Eliminar usuario
 def test_delete_user(url_base,header_request):
+    logger.info("Relizando la solicitud DELETE para eliminar un usuario")
     response = requests.delete(f"{url_base}/2",headers=header_request)
-
     assert response.status_code == 204
+    logger.info("Usuario eliminado con exito")

@@ -7,6 +7,8 @@ from pages.login_page import LoginPage
 # importamos faker
 from faker import Faker
 
+from utils.logger import logger
+
 # inicializamos
 fake = Faker()
 
@@ -19,7 +21,7 @@ def test_login_validation(login_in_driver,usuario,password,debe_funcionar):
     driver = login_in_driver
 
     if debe_funcionar == True:
-        assert "/inventory.html" in driver.current_url, "No se redirgio al inventario"
+        assert "/inventory.html" in driver.current_url, "No se redirigio al inventario"
     elif debe_funcionar == False:
         mensaje_error = LoginPage(driver).obtener_error()
         assert "Epic sadface" in mensaje_error, "el mensaje de error no se esta mostrando"

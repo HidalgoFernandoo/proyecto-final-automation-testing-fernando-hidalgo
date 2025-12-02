@@ -16,7 +16,7 @@ def test_login_validation(login_in_driver,usuario,password,debe_funcionar):
     if debe_funcionar == True:
         logger.info("verficando redireccionamiento dentro de la pagina")
         try: 
-            assert "/inventory.html" in driver.current_url, "No se redirgio al inventario"
+            assert "/inventory.html" in driver.current_url, "No se redirigio al inventario"
             logger.info("test de login completado")
         except AssertionError as e:
             logger.info(f"Assert Fallido: {e}")

@@ -1,59 +1,69 @@
-# Proyecto de Talento Tech
+# Automatización de pruebas para SauceDemo
 
-## Proposito del proyecto
-Este proyecto tiene como objetivo automatizar pruebas de UI y de API para el sitio **SauceDemo**, aplicando practicas como Page Object Model, manejo de datos externos, generacion de reportes HTML, logging y captura automatica de pantalla.
+Este proyecto automatiza pruebas funcionales de UI y API para el sitio **SauceDemo**, aplicando el modelo Page Object, manejo de datos externos, captura de imagenes, generación de reportes HTML y logs.
 
-## Tecnologias utilizadas
+## Tecnologías utilizadas
 - Python 3.x
 - Pytest
 - Selenium WebDriver
-- Logging
+- Requests
 - Faker
-- CSV / JSON
-- Request
+- Manejo de datos en CSV y JSON
+- Logging estándar de Python
 
-## Reportes y Logs
+## Estructura del proyecto
+- `pages/`: Page Objects con los flujos de navegación y acciones sobre la UI.
+- `tests/`: Casos de prueba de UI y API.
+- `datos/`: Datos de prueba en formatos CSV y JSON.
+- `utils/`: Utilidades como la configuración de logging.
+- `assets/`: Recursos auxiliares (por ejemplo, capturas o archivos estáticos).
+- `run_tests.py`: Lanzador principal que ejecuta el conjunto de pruebas y genera el reporte HTML.
+- `logs/`: Carpeta donde se persiste el archivo `suite.log` con el detalle de ejecución.
+- `report.html`: Reporte HTML generado tras la última ejecución de pruebas.
 
-El proyecto genera tres tipos principales de resultados durante la ejecucion de las prubas: **reporte HTML**, **capturas de pantalla**, **archivo de log**
+## Instalación de dependencias
+1. Clona el repositorio y entra al proyecto.
+   ```bash
+   git clone <url-del-repositorio>
+   cd entrega-final-automation
+   ```
+2. (Opcional) Crea y activa un entorno virtual.
+   ```bash
+   python -m venv .venv
+   source .venv/bin/activate  # En Windows: .venv\\Scripts\\activate
+   ```
+3. Instala las dependencias.
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-### Reporte HTML
-Se genera un reporte HTML detallado con el nombre de ```reporte.hmtl``` en la **carpeta raiz** del proyecto
-
-### Logs de ejecución
-Tambien se genera un log con informacion detallada de toda la ejecución de las pruebas en la siguiente ubicacion: ```logs/suite.log```
-
-### Capturas de pantalla
-
-Captura de pantalla
-
-## Ejuctar todas las pruebas
-Para iniciar la ejecucion de las pruebas debes ejecutar la siguiente linea:
-
+## Ejecución de pruebas
+Ejecuta todas las pruebas y genera un reporte HTML autocontenido en la raíz del proyecto:
 ```bash
-python -m run_test.py
+python run_tests.py
 ```
 
-## ¿Como interpretar los reportes?
-- Al ejecutar `run_test.py`, se genera un archivo HTML en la carpeta raiz.
-- El reporte incluye:
-    - Lista completa de test ejecutados
-    - El estado de cada prueba
-    - La duracion de cada test
-    - Las capturas de pantalla para pruebas fallidas
+## ¿Cómo interpretar los reportes generados?
+- **Reporte HTML (`report.html`)**: muestra el detalle de cada prueba (estado, duración y trazas). Se puede abrir en cualquier navegador y queda en la raíz del proyecto tras la ejecución.
+- **Logs (`logs/suite.log`)**: registra la cronología y mensajes de las pruebas; útil para depurar.
+- **Evidencias**: las capturas u otros artefactos se almacenan en `assets/` cuando los tests las producen.
 
-## Pruebas incluidas
-- Login exitoso y fallido
-- Login exitoso y fallido usando faker
-- Comportamiento de la pagina de inventario
-- Comportamiento de la pagina del carrito
-- API (Reqres): GET users, POST create user, DELETE user, validaciones de codigos HTTP, validaciones de estructura JSON
+## Control de Versiones y Documentación
+- **Repositorio en GitHub**: sube el proyecto a GitHub y mantén un historial de commits que describa claramente cada avance.
+- **Ramas de trabajo**: desarrolla nuevas funcionalidades en ramas específicas y fusiónalas con la rama principal mediante pull requests.
+- **README.md**: conserva este archivo actualizado con el propósito, tecnologías, estructura, instrucciones de instalación, ejecución de pruebas e interpretación de reportes.
 
-## Manejo de datos de prueba
-- En la carpeta `datos` se incluyen archivos como:
-    - `data_login.csv` -> datos de usuarios validos o invalidos
-    - `productos.json` -> datos de productos para validacion
+## Alcance de las pruebas incluidas
+- Autenticación (casos exitosos y fallidos, incluidos datos generados con Faker).
+- Flujo de inventario y carrito de compras.
+- Pruebas de API contra el servicio ReqRes (GET, POST, DELETE y validaciones de códigos de estado y estructura JSON).
 
-### Conclusion
-Este proyecto ofrece una estructura organizada y escalable para automatizar pruebas de API utilizando Python y Pytest. Incluye un flujo simple de ejeucion mediante `run_test.py`, generacion automatica de reporte HTML facilitando el analisis de las pruebas.
+## Datos de prueba
+- `datos/data_login.csv`: credenciales válidas e inválidas para los casos de login.
+- `datos/productos.json`: información de productos utilizada en validaciones.
 
-La arquitectura del proyecto esta pensada para agregar nuevos casos de prueba y configuraciones sin modificar el nucleo del proyecto, manteniendo buenas practicas y permitiendo su escalabilidad en el tiempo.
+## Notas
+- El reporte y los logs se sobreescriben con cada ejecución; respáldalos si necesitas conservar ejecuciones anteriores.
+
+##
+- Actualizado por Fernando Hidalgo 02/12/2025
